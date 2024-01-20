@@ -2,7 +2,7 @@
 
 namespace skyss0fly\BanThatStuff;
 
-use pocketmine\{plugin\PluginBase, event\player\PlayerChatEvent, player\Player};
+use pocketmine\{plugin\PluginBase, item\VanillaItems, event\player\PlayerChatEvent, event\player\PlayerInteractEvent; player\Player};
 
 class Main extends PluginBase {
 
@@ -22,7 +22,23 @@ public function OnChat(PlayerChatEvent $event) {
     $plr = $event->getPlayer();
     $plr->SendMessage("Thats a Banned Word!");
   }
+  else {
+    # null
+  }
+  
 
 }
 
+  public function onUse(PlayerInteractEvent $event) {
+$plr = $event->getPlayer();
+    $handitem = $plr->getItem();
+
+    if (VanillaItems($item->getId()) === $items) {
+      $event->cancel();
+      $plr->sendMessage("That Item is Banned! Remove it Now!");
+      }
+      else {
+# null
+      }
+  }
 }
