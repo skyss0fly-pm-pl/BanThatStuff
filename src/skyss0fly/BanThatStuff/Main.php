@@ -7,12 +7,20 @@ use pocketmine\{plugin\PluginBase, command\Command, command\CommandSender, item\
 class Main extends PluginBase {
 
 
-  public const $cfg = $this->getConfig();
+  public const CONFIG_NAME =  "config.yml";
+  private $cfg;
   public const $words = $cfg("BannedWords");
   public const $items = $cfg("BannedItems");
 
   public function onLoad(): void {
    $this->getLogger()->info("Welcome to BanThatStuff \nThis is A Quick Guide to Usage: \nCommands: \n/banitem : Allows you to Ban the Item Held in your hand or By inputting the Id as an Arg \n/banword : Allows you to ban A Word. e.g /banword noob \nCommands Coming Soon, Please Manually input the Ids and Words for now! \nPlugin Constructed by skyss0fly");
+  }
+
+  public function onEnable(): void {
+
+    $this->saveDefaultConfig();
+    $this->cfg = $this->getConfig();
+
   }
 
 public function OnChat(PlayerChatEvent $event) {
