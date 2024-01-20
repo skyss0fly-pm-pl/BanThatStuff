@@ -1,0 +1,22 @@
+name: BanThatStuff
+main: skyss0fly\BanThatStuff\Main
+version: 0.10
+api: 5.0.0
+author: skyss0fly
+description: A simple Banning plugin
+permissions:
+  BanThatStuff.banitem:
+    default: op
+  BanThatStuff.banword:
+    default: op
+  BanThatStuff.bypass:
+  default: op
+commands:
+  banitem:
+    description: use this to Ban your item
+    permission: BanThatStuff.banitem
+    default: false
+  banword:
+    description: Ban that Word!!
+    permission: BanThatStuff.banword
+    default: false
