@@ -28,7 +28,8 @@ public function OnChat(PlayerChatEvent $event) {
   if ($word === $words) {
     if ($plr = $event->getPlayer()->hasPermission("BanThatStuff.bypass")) {
 
-      # non }
+      # non
+    }
       else {
       
     $event->cancel();
@@ -50,7 +51,8 @@ $plr = $event->getPlayer();
     if (VanillaItems($item->getId()) === $items) {
       if ($plr = $event->getPlayer()->hasPermission("BanThatStuff.bypass")) {
 
-      # non }
+      # non 
+      }
         else {
         
       $event->cancel();
