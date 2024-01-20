@@ -94,3 +94,4 @@ switch ($command->getName()) {
           $sender->sendMessage("Coming Soon. Please Manually Input the Word in Config!");
         }
     }
+    }
