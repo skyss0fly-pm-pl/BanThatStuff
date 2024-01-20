@@ -95,3 +95,4 @@ switch ($command->getName()) {
         }
     }
     }
+}
