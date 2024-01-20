@@ -18,9 +18,15 @@ class Main extends PluginBase {
 public function OnChat(PlayerChatEvent $event) {
   $word = $event->getMessage();
   if ($word === $words) {
+    if ($plr = $event->getPlayer()->hasPermission("BanThatStuff.bypass")) {
+
+      # non }
+      else {
+      
     $event->cancel();
     $plr = $event->getPlayer();
     $plr->SendMessage("Thats a Banned Word!");
+  }
   }
   else {
     # null
@@ -34,24 +40,22 @@ $plr = $event->getPlayer();
     $handitem = $plr->getItem();
 
     if (VanillaItems($item->getId()) === $items) {
+      if ($plr = $event->getPlayer()->hasPermission("BanThatStuff.bypass")) {
+
+      # non }
+        else {
+        
       $event->cancel();
       $plr->sendMessage("That Item is Banned! Remove it Now!");
       }
+    }
       else {
 # null
       }
   }
 
   
-    public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
-        if (!$sender instanceof Player) {
-            $this->getLogger()->warning("Please use this command in-game");
-            return false;
-        }
-
-        switch ($command->getName()) {
-          case "banitem" :
-          if ($args[1] === 0) {
+    
             
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
         if (!$sender instanceof Player) {
@@ -72,6 +76,11 @@ $plr = $event->getPlayer();
       #      $itemid = $args[1];
         #    $items()->write($args[1]);
        #     $sender->sendMessage("Successfully Banned The Item: " . VanillaItems()->GetItem($args[1])->name());
-    
+
+        
 # }
-          
+switch ($command->getName()) {
+            case "banword":
+          $sender->sendMessage("Coming Soon. Please Manually Input the Word in Config!");
+        }
+    }
