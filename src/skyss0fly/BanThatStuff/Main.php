@@ -2,7 +2,7 @@
 
 namespace skyss0fly\BanThatStuff;
 
-use pocketmine\{plugin\PluginBase, command\Command, command\CommandSender, item\VanillaItems, event\player\PlayerChatEvent, event\player\PlayerInteractEvent; player\Player};
+use pocketmine\{plugin\PluginBase, command\Command, command\CommandSender, item\VanillaItems, event\player\PlayerChatEvent, event\player\PlayerInteractEvent, player\Player};
 
 class Main extends PluginBase {
 
